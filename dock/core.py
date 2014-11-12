@@ -236,6 +236,10 @@ class DockerTasker(object):
         except APIError:
             return False
 
+    def get_build_log(self,container_id):
+        build_log = self.d.logs(container_id)
+        return build_log
+
 
 class DockerBuilder(object):
     """

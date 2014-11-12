@@ -7,6 +7,7 @@ import os
 
 BUILD_JSON = 'build.json'
 RESULTS_JSON = 'results.json'
+BUILD_LOG = 'build.log'
 
 CONTAINER_SHARE_PATH = '/run/share/'
 CONTAINER_SECRET_PATH = ''
