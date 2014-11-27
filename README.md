@@ -31,12 +31,12 @@ $ dock create-build-image --dock-local-path ${PATH_TO_DOCK_GIT} ${PATH_TO_DOCK_G
 
 Why is it so long? Okay, let's get through. First thing is that dock needs to install itself inside the build image. You can pick several sources for dock: you local copy, (this) official upstream repo, your forked repo or even distribution tarball. In the example above, we are using our locally cloned git repo (`--dock-local-path ${PATH_TO_DOCK_GIT}`).
 
-You have to provide dockerfile too. Luckily these are part of upstream repo (see folder images). It's the first argument: `${PATH_TO_DOCK_GIT}/images/privileged-build`.
+You have to provide dockerfile too. Luckily these are part of upstream repo (see folder [images](images)). It's the first argument: `${PATH_TO_DOCK_GIT}/images/privileged-build`.
 
 And finally, you need to name the image: `privileged-buildroot`.
 
 
-As soon as our build image is built, we can start building stuff in it:
+As soon as our build image is ready (i.e. built), we can start building stuff in it:
 
 ```bash
 $ dock build --method privileged --build-image privileged-buildroot --image test-image --git-url "github.com/TomasTomecek/docker-hello-world.git"
